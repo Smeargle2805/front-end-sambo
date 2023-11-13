@@ -1,7 +1,8 @@
 import React from 'react'
-import { AreaAdmin } from './components/AreaAdmin'
+import { MainPage} from './components/MainPage'
+import { AreaAdmin } from './Components/areaAdmin'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Atletas } from './components/Atletas'
+
 
 export const App = () => {
     return (

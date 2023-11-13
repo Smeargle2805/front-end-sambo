@@ -5,7 +5,7 @@ export const Usuarios = () => {
   return (
     <>
     <section className='w-100 h-100 d-flex flex-column align-items-center'>
-        <h2 className='text-center mt-5'>Usuarios</h2>
+        <h2 className='text-center mt-5 fw-bold'>Usuarios</h2>
         <div id='lista-usuarios'>
             <table class="table border table-hover">
                 <thead>

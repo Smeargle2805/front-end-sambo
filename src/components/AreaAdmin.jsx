@@ -3,6 +3,7 @@ import './css/areaAdmin.css'
 import samboLogo from'../assets/samboLogo.jpeg'
 import { Usuarios } from "./Usuarios"
 import { Atletas } from './Atletas'
+import{ SubirPost } from './SubirPost'
 
 export const AreaAdmin = () => {
 
@@ -13,6 +14,9 @@ export const AreaAdmin = () => {
   const mostrarAtletas = () => {
     setComponenteActual(<Atletas />);
   };
+  const hacerPost = () => {
+    setComponenteActual(<SubirPost/>)
+  }
   return (
     <>
       <section id='area-total' className='w-100 h-100'>
@@ -38,7 +42,7 @@ export const AreaAdmin = () => {
               <button className='button-opcion' type='button'>Torneos</button>
             </div>
             <div className='w-100 h-100 d-flex justify-content-center'>
-              <button className='button-opcion' type='button'>Area Editor</button>
+              <button className='button-opcion' type='button' onClick={hacerPost}>Area Editor</button>
             </div>
           </div>
         </div>
