@@ -4,6 +4,7 @@ import samboLogo from'../assets/samboLogo.jpeg'
 import { Usuarios } from "./Usuarios"
 import { Atletas } from './Atletas'
 import{ SubirPost } from './SubirPost'
+import { Torneos } from './Torneos'
 
 export const AreaAdmin = () => {
 
@@ -15,7 +16,10 @@ export const AreaAdmin = () => {
     setComponenteActual(<Atletas />);
   };
   const hacerPost = () => {
-    setComponenteActual(<SubirPost/>)
+    setComponenteActual(<SubirPost/>);
+  }
+  const mostrarTorneo = () => {
+    setComponenteActual(<Torneos/>)
   }
   return (
     <>
@@ -39,7 +43,7 @@ export const AreaAdmin = () => {
               <button className='button-opcion' type='button'>Escuelas</button>
             </div>
             <div className='w-100 h-100 d-flex justify-content-center'>
-              <button className='button-opcion' type='button'>Torneos</button>
+              <button className='button-opcion' type='button' onClick={mostrarTorneo}>Torneos</button>
             </div>
             <div className='w-100 h-100 d-flex justify-content-center'>
               <button className='button-opcion' type='button' onClick={hacerPost}>Area Editor</button>
