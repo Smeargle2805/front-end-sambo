@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import './css/areaAdmin.css'
-import samboLogo from'../assets/samboLogo.jpeg'
+import samboLogo from '../assets/samboLogo.jpeg'
 import LoginOutLogo from '../assets/user.png'
 import { Usuarios } from "./Usuarios"
 import { Atletas } from './Atletas'
-import{ SubirPost } from './SubirPost'
+import { SubirPost } from './SubirPost'
 import { Maestros } from './Maestros'
+import { Escuelas } from "./Escuelas";
+import { AreaEscuelas } from './AreaEscuelas'
 
 export const AreaAdmin = () => {
 
@@ -17,22 +19,32 @@ export const AreaAdmin = () => {
     setComponenteActual(<Atletas />);
   };
   const hacerPost = () => {
-    setComponenteActual(<SubirPost/>)
+    setComponenteActual(<SubirPost />)
   }
   const mostrarMaestros = () => {
-    setComponenteActual(<Maestros/>)
+    setComponenteActual(<Maestros />)
   }
+
+  const mostrarEscuelas = () => {
+    setComponenteActual(<Escuelas />)
+  }
+
+  const mostrarAreaEscuelas = () => {
+    setComponenteActual(<AreaEscuelas />)
+  }
+
+
   return (
     <>
       <section id='area-total' className='w-100 h-100'>
         <div id='barra-lateral'>
           <div id='logo-User'>
-            <img src={LoginOutLogo}/>
+            <img src={LoginOutLogo} />
             <p>Cerrar Sesion</p>
           </div>
           <div id='info-user' className='d-flex align-items-center justify-content-center flex-column'>
-              <img src={samboLogo} alt="" />
-              <p>Usuario1</p>
+            <img src={samboLogo} alt="" />
+            <p>Usuario1</p>
           </div>
           <div id='opciones'>
             <div className='w-100 h-100 d-flex justify-content-center'>
@@ -45,7 +57,10 @@ export const AreaAdmin = () => {
               <button className='button-opcion' type='button' onClick={mostrarMaestros}>Maestros</button>
             </div>
             <div className='w-100 h-100 d-flex justify-content-center'>
-              <button className='button-opcion' type='button'>Escuelas</button>
+              <button className='button-opcion' type='button' onClick={mostrarEscuelas} >Escuelas</button>
+            </div>
+            <div className='w-100 h-100 d-flex justify-content-center'>
+              <button className='button-opcion' type='button' onClick={mostrarAreaEscuelas} >Area Escuelas</button>
             </div>
             <div className='w-100 h-100 d-flex justify-content-center'>
               <button className='button-opcion' type='button'>Torneos</button>
@@ -58,7 +73,7 @@ export const AreaAdmin = () => {
         <div id='area-contenido'>
           {componenteActual}
         </div>
-        
+
       </section>
     </>
   );
