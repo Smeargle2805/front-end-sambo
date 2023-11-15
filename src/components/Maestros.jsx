@@ -36,7 +36,7 @@ export const Maestros = () => {
             </table>
         </div>
         <div>
-            <button className='btn estadoButton2' type="button"  data-bs-toggle="modal" data-bs-target="#maestrosModalRegistrar">Registrar Un Maestro</button>
+            <button className='btn btn-success ' type="btn"  data-bs-toggle="modal" data-bs-target="#maestrosModalRegistrar">Registrar Un Maestro</button>
         </div>
     </section>
 

@@ -41,7 +41,7 @@ export const Escuelas = () => {
                     </table>
                 </div>
                 <div>
-                    <button className='btn btn-primary ' type="button" data-bs-toggle="modal" data-bs-target="#escuelasModalRegistrar">Registrar escuela</button>
+                    <button className='btn btn-success ' type="button" data-bs-toggle="modal" data-bs-target="#escuelasModalRegistrar">Registrar escuela</button>
                 </div>
             </section>
 

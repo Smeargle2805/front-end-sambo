@@ -38,10 +38,6 @@ export const AreaAdmin = () => {
     <>
       <section id='area-total' className='w-100 h-100'>
         <div id='barra-lateral'>
-          <div id='logo-User'>
-            <img src={LoginOutLogo} />
-            <p>Cerrar Sesion</p>
-          </div>
           <div id='info-user' className='d-flex align-items-center justify-content-center flex-column'>
             <img src={samboLogo} alt="" />
             <p>Usuario1</p>
@@ -60,13 +56,13 @@ export const AreaAdmin = () => {
               <button className='button-opcion' type='button' onClick={mostrarEscuelas} >Escuelas</button>
             </div>
             <div className='w-100 h-100 d-flex justify-content-center'>
-              <button className='button-opcion' type='button' onClick={mostrarAreaEscuelas} >Area Escuelas</button>
-            </div>
-            <div className='w-100 h-100 d-flex justify-content-center'>
               <button className='button-opcion' type='button'>Torneos</button>
             </div>
             <div className='w-100 h-100 d-flex justify-content-center'>
               <button className='button-opcion' type='button' onClick={hacerPost}>Area Editor</button>
+            </div>
+            <div className='w-100 h-100 d-flex justify-content-center' >
+              <button className='button-opcion' type='button'>Cerrar Sesion</button>
             </div>
           </div>
         </div>

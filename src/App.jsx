@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
-import { AreaAdmin } from './Components/areaAdmin'
+import { AreaAdmin } from './components/AreaAdmin'
 import { Login } from './components/login'
 
 export const App = () => {
