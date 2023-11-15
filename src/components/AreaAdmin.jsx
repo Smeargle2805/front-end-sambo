@@ -8,6 +8,7 @@ import { SubirPost } from './SubirPost'
 import { Maestros } from './Maestros'
 import { Escuelas } from "./Escuelas";
 import { AreaEscuelas } from './AreaEscuelas'
+import { Torneos } from './Torneos'
 
 export const AreaAdmin = () => {
 
@@ -23,7 +24,6 @@ export const AreaAdmin = () => {
   }
   const mostrarTorneo = () => {
     setComponenteActual(<Torneos/>)
-    setComponenteActual(<SubirPost />)
   }
   const mostrarMaestros = () => {
     setComponenteActual(<Maestros />)

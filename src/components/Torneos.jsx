@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './css/atletas.css'
 
 export const Torneos = () => {
     const [torneos, setTorneos] = useState([

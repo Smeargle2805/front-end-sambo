@@ -1,5 +1,4 @@
 import React from 'react'
-import './css/usuarios.css'
 
 export const Usuarios = () => {
   return (
