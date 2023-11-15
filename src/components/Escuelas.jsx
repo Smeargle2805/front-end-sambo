@@ -1,5 +1,5 @@
 import React from 'react'
-import './css/Escuelas.css'
+
 export const Escuelas = () => {
     return (
         <>
