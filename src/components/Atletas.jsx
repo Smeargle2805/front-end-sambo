@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import './css/atletas.css'
 export const Atletas = () => {
     const opcionesPorGenero = {
         Masculino: ["58kg", "64kg", "71kg", "79kg", "88kg", "98kg", "+98kg"],
@@ -16,7 +16,7 @@ export const Atletas = () => {
     <>
         <section className='w-100 h-100 d-flex flex-column align-items-center'>
             <h2 className='text-center mt-5 fw-bold'>Atletas</h2>
-            <div id='lista-usuarios'>
+            <div id='lista-atletas'>
                 <table class="table border table-hover">
                     <thead>
                         <tr>

@@ -1,0 +1,25 @@
+#lista-maestros{
+    width: 75%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    align-items: end;
+}
+.estadoButton{
+    background: linear-gradient(0deg, rgba(5,5,5,1) 0%, rgba(33,46,75,1) 50%, rgba(21,48,110,1) 100%);
+    color: #fff;
+}
+.estadoButton:hover{
+    color: #fff;
+    background: #970e0e;
+    border-color: #2F4E96;
+}
+.estadoButton2{
+    background-color: #000;
+    color: #fff;
+}
+.estadoButton2:hover{
+ color: #fff;
+ background: linear-gradient(0deg, rgba(5,5,5,1) 0%, rgba(33,46,75,1) 50%, rgba(21,48,110,1) 100%);
+}
+
