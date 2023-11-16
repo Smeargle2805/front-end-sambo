@@ -19,6 +19,7 @@ export const App = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/' element={<MainPage />} />
           <Route path='/admin/*' element={<AreaAdmin />}>
+            {/* Todos los componente <Route/> que pongan dentro de este <Route/> son rutas hijas (explicaciacion de que pasara con las rutas hijas en AreaAdmin) */}
             <Route path='usuarios' element={<Usuarios />} />
             <Route path='atletas' element={<Atletas />} />
             <Route path='maestros' element={<Maestros />} />

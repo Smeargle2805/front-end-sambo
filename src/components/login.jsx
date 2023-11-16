@@ -12,7 +12,7 @@ export const Login = () => {
   const handleClickMainPage = () => {
     console.log('hola')
     event.preventDefault();
-    navegar('/AdminPage');
+    navegar('/admin');
 
   }
 
