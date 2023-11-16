@@ -30,4 +30,14 @@ export const App = () => {
       </BrowserRouter>
     </>
   )
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/AdminPage' element={<AreaAdmin />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
 }
