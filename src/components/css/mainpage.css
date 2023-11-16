@@ -27,3 +27,22 @@
 .contenido {
   margin: 10px 20px;
 }
+
+.contenedor {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.year {
+  font-weight: bold;
+}
+
+.copyright {
+  font-size: 15px;
+}
