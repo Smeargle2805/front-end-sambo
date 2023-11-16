@@ -10,7 +10,8 @@ export const App = () => {
       <>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={ <AreaAdmin/> } />
+            <Route path='/' element={ <Login/> } />
+            <Route path='/AdminPage' element={ <AreaAdmin/> } />
           </Routes>
         </BrowserRouter>
       </>

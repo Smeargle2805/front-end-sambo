@@ -1,11 +1,25 @@
 import React from 'react'
-import './css/login.css'
+import { useNavigate } from 'react-router-dom';
 
+
+import './css/login.css'
 import  logoSambo  from '../assets/LOGO.png';
 import logoFooter from '../assets/BUSHIDO.png'
 
 
+
+
 export const Login = () => {
+    
+const navegar=useNavigate();
+
+const handleClickMainPage =()=>{
+    console.log('hola')
+    event.preventDefault();
+    navegar('/AdminPage');
+
+}
+
     return (
         <>
             <main>
@@ -34,7 +48,7 @@ export const Login = () => {
                                 </select>
                             </div>
                             <div class="mt-5">
-                                <button type="submit" class="btn botonLogin">Ingresar Al Sistema</button>
+                                <button type="submit" class="btn botonLogin" onClick={handleClickMainPage}>Ingresar Al Sistema</button>
                             </div>
                         </form>
                     </div>

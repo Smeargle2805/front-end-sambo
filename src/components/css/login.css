@@ -21,18 +21,20 @@ main {
     background-color: rgba(206, 209, 5, 0.815) !important;
     padding: 1% 10%;
     border-radius: 25px;
+    box-shadow: 10px 2px 50px rgb(74, 78, 8);
 }
 
 .contenedorLogin {
-    width: 100%;
-    max-width: 400px;
+    justify-content: center;
     padding: 20px 20px;
     background: linear-gradient(0deg, rgba(5, 5, 5, 1) 0%, rgba(33, 46, 75, 1) 50%, rgba(21, 48, 110, 1) 100%);
     border-radius: 20px;
+    box-shadow: 10px 2px 50px rgb(32, 34, 5);
 }
 
 h2 {
-    color: #014f86;
+    color: #252525;
+    text-shadow: 1px 1px 1px black;
 }
 
 .contenedorLogin form {
@@ -40,9 +42,9 @@ h2 {
 }
 
 .contenedorImg {
+    text-align: center;
     width: 100%;
-    max-width: 400px;
-    padding: 5% 30%;
+    padding: 2% 30%;
 }
 
 .contenedorImg img {
@@ -58,9 +60,31 @@ h2 {
 .footerLogin img {
     width: 100%;
     max-width: 400px;
+    transform: skewX(0deg);
+    animation: skew 10s infinite;
+    animation-direction:normal;
+    animation-delay: 3s;
+}
+
+@keyframes skew{
+    0%{
+        transform:translateX(20px);
+    }
+    100%{
+        transform:translateX(-2000px);
+    }
 }
 
 .botonLogin {
     background-color: rgb(160, 9, 9);
+    color: #fff;
+}
+
+.botonLogin:hover{
+    background-color:  rgba(131, 133, 8, 0.815);
+    color: #fff;
+}
+.botonLogin:focus{
+    background-color:  rgba(131, 133, 8, 0.815);
     color: #fff;
 }
