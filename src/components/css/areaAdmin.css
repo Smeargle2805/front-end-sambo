@@ -1,70 +1,87 @@
-#area-total{
-    background-color:rgba(128, 128, 128, 0.37);
-    display: flex;
-}
-#logo-User{
-    margin-top: 2%;
-    height: 6%;
-    width: 100%;
-    text-align: end;
-}
-#logo-User>img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 6%;
-    margin-top: 2%;
-    margin-bottom: 0%;
-}
-#logo-User>p{
-    padding-right: 3%;
-    color: #fff;
-    font-size:small;
-}
-#info-user{
-    width: 100%;
-    height: 30%;
-}
-#info-user>img{
-    display: flex;
-    height: 50%;
-    width: 45%;
-    border-radius: 10px;
-    background-color: white;
-}
-#info-user>p{
-    color: white;
-    margin-top: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-#opciones{
-    width: 100%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+#area-total {
+  background-color: rgba(128, 128, 128, 0.37);
+  display: flex;
 }
 
-#barra-lateral{
-    height: 100vh;
-    width: 20%;
-    background-color: #022a86c6;
+#logo-User {
+  margin-top: 2%;
+  height: 6%;
+  width: 100%;
+  text-align: end;
 }
-#area-contenido{
-    width: 80%;
-    height: 100vh;
+
+#logo-User>img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 6%;
+  margin-top: 2%;
+  margin-bottom: 0%;
 }
-.button-opcion{
-    height: 45%;
-    width: 60%;
-    border:solid gray 1px;
-    font-weight: bold;
-    border-radius: 7px;
-    box-shadow: rgba(116, 115, 115, 0.879) 3px 5px 1px;
+
+#logo-User>p {
+  padding-right: 3%;
+  color: #fff;
+  font-size: small;
 }
-.button-opcion:hover{
-    color: white;
-    background-color:rgba(212, 31, 31, 0.827);
+
+#info-user {
+  width: 100%;
+  height: 30%;
+}
+
+#info-user>img {
+  display: flex;
+  height: 50%;
+  width: 45%;
+  border-radius: 10px;
+  background-color: white;
+}
+
+#info-user>p {
+  color: white;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#opciones {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#barra-lateral {
+  height: 100vh;
+  width: 20%;
+  background-color: #022a86c6;
+}
+
+#area-contenido {
+  width: 80%;
+  height: 100vh;
+}
+
+.button-opcion {
+  height: 45%;
+  width: 60%;
+  border: solid gray 1px;
+  font-weight: bold;
+  border-radius: 7px;
+  text-align: center;
+  box-shadow: rgba(116, 115, 115, 0.879) 3px 5px 1px;
+  background-color: #f0f0f0;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-opcion:hover {
+  color: white;
+  background-color: rgba(212, 31, 31, 0.827);
 }

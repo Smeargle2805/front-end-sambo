@@ -1,42 +1,35 @@
-import React, { useState } from 'react'
-import './css/areaAdmin.css'
-import samboLogo from '../assets/samboLogo.jpeg'
-import LoginOutLogo from '../assets/user.png'
-import { Usuarios } from "./Usuarios"
-import { Atletas } from './Atletas'
-import { SubirPost } from './SubirPost'
-import { Maestros } from './Maestros'
-import { Escuelas } from "./Escuelas";
-import { AreaEscuelas } from './AreaEscuelas'
-import { Torneos } from './Torneos'
+import './css/areaAdmin.css';
+import samboLogo from '../assets/samboLogo.jpeg';
+import { Link } from 'react-router-dom';
 
-export const AreaAdmin = () => {
+export const AreaAdmin = ({ children }) => {
 
-  const [componenteActual, setComponenteActual] = useState(null);
-  const mostrarUsuarios = () => {
-    setComponenteActual(<Usuarios />);
-  };
-  const mostrarAtletas = () => {
-    setComponenteActual(<Atletas />);
-  };
-  const hacerPost = () => {
-    setComponenteActual(<SubirPost/>);
-  }
-  const mostrarTorneo = () => {
-    setComponenteActual(<Torneos/>)
-  }
-  const mostrarMaestros = () => {
-    setComponenteActual(<Maestros />)
-  }
-
-  const mostrarEscuelas = () => {
-    setComponenteActual(<Escuelas />)
-  }
-
-  const mostrarAreaEscuelas = () => {
-    setComponenteActual(<AreaEscuelas />)
-  }
-
+  const links = [
+    {
+      title: 'Usuarios',
+      to: '/usuarios',
+    },
+    {
+      title: 'Atletas',
+      to: '/atletas',
+    },
+    {
+      title: 'Maestros',
+      to: '/maestros',
+    },
+    {
+      title: 'Escuelas',
+      to: '/escuelas',
+    },
+    {
+      title: 'Torneos',
+      to: '/torneos',
+    },
+    {
+      title: 'Area de editor',
+      to: '/editor',
+    },
+  ];
 
   return (
     <>
@@ -47,31 +40,19 @@ export const AreaAdmin = () => {
             <p>Usuario1</p>
           </div>
           <div id='opciones'>
-            <div className='w-100 h-100 d-flex justify-content-center'>
-              <button className='button-opcion' type='button' onClick={mostrarUsuarios}>Usuarios </button>
-            </div>
-            <div className='w-100 h-100 d-flex justify-content-center'>
-              <button className='button-opcion' type='button' onClick={mostrarAtletas}>Atletas</button>
-            </div>
-            <div className='w-100 h-100 d-flex justify-content-center'>
-              <button className='button-opcion' type='button' onClick={mostrarMaestros}>Maestros</button>
-            </div>
-            <div className='w-100 h-100 d-flex justify-content-center'>
-              <button className='button-opcion' type='button' onClick={mostrarEscuelas} >Escuelas</button>
-            </div>
-            <div className='w-100 h-100 d-flex justify-content-center'>
-              <button className='button-opcion' type='button' onClick={mostrarTorneo}>Torneos</button>
-            </div>
-            <div className='w-100 h-100 d-flex justify-content-center'>
-              <button className='button-opcion' type='button' onClick={hacerPost}>Area Editor</button>
-            </div>
-            <div className='w-100 h-100 d-flex justify-content-center' >
-              <button className='button-opcion' type='button'>Cerrar Sesion</button>
-            </div>
+            {links.map(link => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className='button-opcion mb-4'
+              >
+                {link.title}
+              </Link>
+            ))}
           </div>
         </div>
         <div id='area-contenido'>
-          {componenteActual}
+          {children}
         </div>
 
       </section>
