@@ -1,33 +1,33 @@
 import './css/areaAdmin.css';
 import samboLogo from '../assets/samboLogo.jpeg';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
-export const AreaAdmin = ({ children }) => {
+export const AreaAdmin = () => {
 
   const links = [
     {
       title: 'Usuarios',
-      to: '/usuarios',
+      to: '/admin/usuarios',
     },
     {
       title: 'Atletas',
-      to: '/atletas',
+      to: '/admin/atletas',
     },
     {
       title: 'Maestros',
-      to: '/maestros',
+      to: '/admin/maestros',
     },
     {
       title: 'Escuelas',
-      to: '/escuelas',
+      to: '/admin/escuelas',
     },
     {
       title: 'Torneos',
-      to: '/torneos',
+      to: '/admin/torneos',
     },
     {
       title: 'Area de editor',
-      to: '/editor',
+      to: '/admin/editor',
     },
   ];
 
@@ -52,7 +52,7 @@ export const AreaAdmin = ({ children }) => {
           </div>
         </div>
         <div id='area-contenido'>
-          {children}
+          <Outlet />
         </div>
 
       </section>

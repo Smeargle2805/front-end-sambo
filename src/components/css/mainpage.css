@@ -1,55 +1,29 @@
-
-nav{
-   background-color:#022a86c6;
-    width: 100%;
-    height: 16vh;
-    display: flex;
-    justify-content: center;
-}
-nav>div{
-    height: 100%;
-}
-nav>div>img{
-    max-height: 100%;
-}
-section{
-    height: 84vh;
+.nav-azul {
+  background-color: #022a86c6;
+  height: 100px;
+  padding-inline: 20px !important;
 }
 
-#info{
-    height:45vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-}
-#banner{
-    width: auto;
-    height: 37vh;
-    text-align: center;
-    font-size: 15px;
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+.logo {
+  max-width: 100%;
+  height: 100px;
 }
 
-.grid-banner{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 0.7fr 1fr;
+.btn-login {
+  text-align: end;
 }
-.div-img-banner{
-    display: flex;
-    justify-content: initial;
-    padding-left: 10px;
+
+.btn-login:hover {
+  text-decoration: none;
 }
-.div-img-banner>img{
-    max-height: 37vh;
-    border-radius: 5px;
+
+.banner {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top center;
 }
-.info-atleta{
-    font-size: 8px;
-    text-align: start;
-}
-.info-atleta>h4{
-    font-size: 10px;
+
+.contenido {
+  margin: 10px 20px;
 }
