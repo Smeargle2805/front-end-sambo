@@ -49,19 +49,19 @@ export const Usuarios = () => {
             <div className="modal-body">
               <form>
                 <div className="form-group mb-3">
-                  <label className='mb-1 mx-2' htmlFor="nombreUsuario">Nombre de Usuario</label>
+                  <label className='mb-1 mx-2' htmlhtmlFor="nombreUsuario">Nombre de Usuario</label>
                   <input type="text" className="form-control" id="nombreUsuario" placeholder="Ingrese su nombre de usuario" required />
                 </div>
                 <div className="form-group mb-3">
-                  <label className='mb-1 mx-2' htmlFor="contrasenia">Contraseña</label>
+                  <label className='mb-1 mx-2' htmlhtmlFor="contrasenia">Contraseña</label>
                   <input type="password" className="form-control" id="contrasenia" placeholder="Ingrese su contraseña" required />
                 </div>
                 <div className="form-group mb-3">
-                  <label className='mb-1 mx-2' htmlFor="confirmarContrasenia">Confirmar Contraseña</label>
+                  <label className='mb-1 mx-2' htmlhtmlFor="confirmarContrasenia">Confirmar Contraseña</label>
                   <input type="password" className="form-control" id="confirmarContrasenia" placeholder="Confirme su contraseña" required />
                 </div>
                 <div className="form-group mb-3">
-                  <label className='mb-1 mx-2' htmlFor="rol">Rol</label>
+                  <label className='mb-1 mx-2' htmlhtmlFor="rol">Rol</label>
                   <select className="form-control" id="rol" required>
                     <option value="" disabled selected>Seleccione un rol</option>
                     <option value="admin">GOODSYSTEM</option>

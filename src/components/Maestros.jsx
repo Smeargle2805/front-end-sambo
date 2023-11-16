@@ -49,11 +49,11 @@ export const Maestros = () => {
             <div className="modal-body">
               <form>
                 <div className="form-group mb-3">
-                  <label className='mb-1 mx-2' htmlFor="nombreMaestro">Nombre de Maestro</label>
+                  <label className='mb-1 mx-2' htmlhtmlFor="nombreMaestro">Nombre de Maestro</label>
                   <input type="text" className="form-control" id="nombreMaestro" placeholder="Ingrese el nombre del maestro" required />
                 </div>
                 <div className="form-group mb-3">
-                  <label className='mb-1 mx-2' htmlFor="fechaCreacion">Fecha De Ingreso A la Escuela</label>
+                  <label className='mb-1 mx-2' htmlhtmlFor="fechaCreacion">Fecha De Ingreso A la Escuela</label>
                   <input type="date" className="form-control" id="contrasenia" placeholder="fechaCreacion" required />
                 </div>
               </form>
@@ -79,7 +79,7 @@ export const Maestros = () => {
             <div className="modal-body">
               <form>
                 <div className="form-group mb-3">
-                  <label className='mb-1 mx-2' htmlFor="nombreMaestro">Nombre de Maestro</label>
+                  <label className='mb-1 mx-2' htmlhtmlFor="nombreMaestro">Nombre de Maestro</label>
                   <input type="text" className="form-control" id="nombreMaestro" placeholder="Luis" required />
                 </div>
               </form>

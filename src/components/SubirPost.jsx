@@ -6,17 +6,17 @@ export const SubirPost = () => {
       <div className='d-flex flex-colum justify-content-center' >
         <form className='w-50'>
           <div className="mb-3">
-            <label for="titulo" className="form-label fw-bold">Título</label>
+            <label htmlFor="titulo" className="form-label fw-bold">Título</label>
             <input type="text" className="form-control" id="titulo" name="titulo" required />
           </div>
 
           <div className="mb-3">
-            <label for="banner" className="form-label fw-bold">Banner</label>
+            <label htmlFor="banner" className="form-label fw-bold">Banner</label>
             <input type="file" className="form-control h-100 w-100" id="banner" name="banner" accept="image/*" required />
           </div>
 
           <div className="mb-3">
-            <label for="descripcion" className="form-label fw-bold">Descripción</label>
+            <label htmlFor="descripcion" className="form-label fw-bold">Descripción</label>
             <textarea className="form-control" id="descripcion" name="descripcion" rows="5" required></textarea>
           </div>
         </form>
