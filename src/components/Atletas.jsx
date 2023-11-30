@@ -1,6 +1,15 @@
 import { useState } from 'react'
 import './css/atletas.css'
+import axios from 'axios';
+
 export const Atletas = () => {
+
+  const obtenerCategorias =async () =>{
+    const url ="http://localhost:3000/api/categoria"
+    const response = await axios.get(url)
+    console.log(await response.data);
+  }
+  obtenerCategorias();
   const opcionesPorGenero = {
     Masculino: ["58kg", "64kg", "71kg", "79kg", "88kg", "98kg", "+98kg"],
     Femenino: ["50kg", "54kg", "59kg", "65kg", "72kg", "80kg", "+80kg"]
