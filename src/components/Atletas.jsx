@@ -12,7 +12,43 @@ export const Atletas = () => {
   const [grado, setGrado] = useState("");
   const [maestro, setMaestro] = useState("");
   const [escuela, setEscuela] = useState("");
+  const [atletas, setAtletas] = useState([]);
 
+  const obtenerAtletas = async () => {
+    try {
+      const url = "http://localhost:3000/api/atleta";
+      const response = await axios.get(url);
+      console.log(response.data.atletas);
+      setAtletas(response.data.atletas);
+    } catch (error) {
+      console.error("Error al obtener los atletas", error);
+    }
+  };
+  
+  const borrarAtleta = (id) => {
+    const url =`http://localhost:3000/api/atleta/${parseInt(id)}`
+
+    Swal.fire({
+      title: "Quiere borrar el atleta?",
+      showDenyButton: true,
+      confirmButtonText: "Eliminar",
+      denyButtonText: `No eliminar`
+    }).then(async(result) => {
+      if (result.isConfirmed) {
+        await axios.delete(url)
+        Swal.fire({
+          title: "Atleta eliminado",
+          showConfirmButton: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.reload();
+          }
+        });
+      } else if (result.isDenied) {
+        Swal.fire("Operacion cancelada", "", "info");
+      }
+    });
+  }
   const obtenerCategorias = async () => {
     try {
       const url = "http://localhost:3000/api/categoria";
@@ -70,7 +106,14 @@ export const Atletas = () => {
 
     try {
       const response = await axios.post(url, formData);
-      console.log(response);
+      Swal.fire({
+        title: response.data.msg,
+        showConfirmButton: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.reload();
+        }
+      });
     } catch (error) {
       console.error("Error al registrar el atleta", error);
     }
@@ -81,6 +124,7 @@ export const Atletas = () => {
     obtenerGrados();
     obtenerMaestros();
     obtenerEscuelas();
+    obtenerAtletas();
   }, []);
 
   const handleGeneroChange = (event) => {
@@ -96,18 +140,32 @@ export const Atletas = () => {
           <table className="table border table-hover">
             <thead>
               <tr>
-                <th scope="col">Nombre Atleta</th>
-                <th scope="col">Fecha de Nacimiento</th>
-                <th scope="col">Grado</th>
-                <th scope="col">Categoria</th>
-                <th scope="col">Maestro</th>
-                <th scope="col">Escuela</th>
+                <th className='text-center' scope="col">Nombre Atleta</th>
+                <th className='text-center' scope="col">Fecha de Nacimiento</th>
+                <th className='text-center' scope="col">Grado</th>
+                <th className='text-center' scope="col">Categoria</th>
+                <th className='text-center' scope="col">Maestro</th>
+                <th className='text-center' scope="col">Escuela</th>
                 <th className='text-center' scope="col">Eliminar</th>
               </tr>
             </thead>
             <tbody>
-              {/* Agrega las filas de la tabla con los datos de los atletas */}
-            </tbody>
+  {atletas.map((atleta) => (
+    <tr key={atleta.atletaid}>
+      <td className='text-center'>{`${atleta.nombre} ${atleta.apellidos}`}</td>
+      <td className='text-center'>{atleta.fechanacimiento}</td>
+      <td className='text-center'>{atleta.grado}</td>
+      <td className='text-center'>{atleta.categoria}</td>
+      <td className='text-center'>{atleta.maestro}</td>
+      <td className='text-center'>{atleta.escuela}</td>
+      <td className='text-center'>
+      <button className='btn btn-danger' onClick={() => borrarAtleta(atleta.atletaid)}>
+        Borrar Atleta
+      </button>
+      </td>
+    </tr>
+  ))}
+</tbody>
           </table>
         </div>
         <div>
